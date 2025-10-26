@@ -4,9 +4,6 @@ import java.util.Iterator;
 public class SelectionSortTimer {
   
   public static CardPile sort(CardPile unsorted) {
-    
-    // register the starting configuration with the recorder
-    //record.add(unsorted);
 
     // Here is the result list you will be creating
     CardPile sorted = new CardPile();
@@ -22,7 +19,7 @@ public class SelectionSortTimer {
     //        record.add(unsorted); // the unsorted pile
     // ***********************************************************
     Collections.shuffle(unsorted); //shuffle unsorted pile to start
-    // //record progress
+  
     while (unsorted.size() > 0) {
       // move one card between piles
       //find smallest card in unsorted pile
@@ -31,10 +28,6 @@ public class SelectionSortTimer {
       unsorted.remove(smallestCard);
       //add it to sorted pile
       sorted.addLast(smallestCard);
-      // record progress
-      //record.next();
-      //record.add(sorted);
-      //record.add(unsorted);
     }
     return sorted;
   }
@@ -51,30 +44,22 @@ public class SelectionSortTimer {
       }
       return smallestCard;
     }
+  /** Starts the program running */
+  public static void main(String args[]) {
+    
+    if (args.length<1) {
+      System.err.println("Please specify how many cards to sort!");
+    } else {
+      Card[] deck = Card.newDeck(true);
+      CardPile cards = new CardPile();
+      
+      for (int i = 0; i<Integer.parseInt(args[0]); i++ ) {
+        cards.add(deck[(int)(52*Math.random())]);
+      }
 
-  public static void main(String args[]) {  
-      //set up sorting recorder
-      SortRecorder recorder = new SortRecorder();
+      sort(cards);
+      
+    }
 
-      //load card images
-      Card.loadImages(recorder);
-
-      //make new deck 
-      CardPile deck = new CardPile(Card.newDeck(true), 2, 2);
-
-      //shuffle
-      Collections.shuffle(deck);
-
-      //sort the deck
-      deck = SelectionSort.sort(deck, recorder);
-
-      //print sorted deck
-      System.out.println(deck);
-
-      //Display the animation
-      recorder.display("Selection Sort Animation");
-
-    // return the sorted result here
-    //return sorted;
   }
 }

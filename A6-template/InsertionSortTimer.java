@@ -4,9 +4,6 @@ import java.util.Iterator;
 public class InsertionSortTimer {
   
   public static CardPile sort(CardPile unsorted) {
-    
-    // register the starting configuration with the recorder
-    //record.add(unsorted);
 
     // Here is the result list you will be creating
     CardPile sorted = new CardPile();
@@ -36,31 +33,26 @@ public class InsertionSortTimer {
       }
       //insert the card into sorted pile at the correct index
       sorted.add(insertIndex, nextCard);
-
-      // record progress
-      //record.next();
-      //record.add(sorted);
-      //record.add(unsorted);
     }
     // return the sorted result here
     return sorted;
   }
-
-  public static void main(String args[]) {  
-      //set up sorting recorder
-      SortRecorder recorder = new SortRecorder();
-
-      //load card images
-      Card.loadImages(recorder);
-
-      //make deck
-      CardPile cards = new CardPile(Card.newDeck(true), 2, 2);
-
-      Collections.shuffle(cards);
-      cards = InsertionSort.sort(cards, recorder);
-
-     recorder.display("Card Sort Demo: InsertionSort");
+  /** Starts the program running */
+  public static void main(String args[]) {
+    
+    if (args.length<1) {
+      System.err.println("Please specify how many cards to sort!");
+    } else {
+      Card[] deck = Card.newDeck(true);
+      CardPile cards = new CardPile();
       
-  }
+      for (int i = 0; i<Integer.parseInt(args[0]); i++ ) {
+        cards.add(deck[(int)(52*Math.random())]);
+      }
+
+      sort(cards);
+      
+    }
+}
 }
 

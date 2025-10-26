@@ -27,7 +27,7 @@ _____ 1 pt: Implemented timing versions of at least two sort algorithms
 
 _____ 1 pt: Summary of timing results written up in readme
 
-_____ Kudos: Quicksort for CardPile sorts correctly
+__**YES**___ Kudos: Quicksort for CardPile sorts correctly
 
 _____ Kudos: Quicksort for CardPile implemented efficiently
 
@@ -36,7 +36,7 @@ _____ Kudos: Quicksort for CardPile implemented efficiently
 
 _____ 4 pts: Program compiles without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+__**YES**___ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
 _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
@@ -50,6 +50,6 @@ _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
       _____ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission
+_**YES**____ 1 pt: All required files included with submission
 
-_____ 1 pt: readme.md contains reflection on the assignment
+___**YES**__ 1 pt: readme.md contains reflection on the assignment
