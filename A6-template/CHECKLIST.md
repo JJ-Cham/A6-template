@@ -11,17 +11,17 @@ your work, please indicate the status of each item
 
 ## Assignment Points:
 
-_____ 2 pt: Selection sort for CardPile sorts correctly
+__**YES**___ 2 pt: Selection sort for CardPile sorts correctly
 
-_____ 1 pt: Selection sort for CardPile implemented efficiently
+__**YES**___ 1 pt: Selection sort for CardPile implemented efficiently
 
-_____ 2 pt: Insertion sort for CardPile sorts correctly
+__**YES**___ 2 pt: Insertion sort for CardPile sorts correctly
 
-_____ 1 pt: Insertion sort for CardPile implemented efficiently
+_**YES**____ 1 pt: Insertion sort for CardPile implemented efficiently
 
-_____ 1 pt: Merge sort for CardPile sorts correctly
+__**YES**___ 1 pt: Merge sort for CardPile sorts correctly
 
-_____ 1 pt: Merge sort for CardPile implemented efficiently
+__**YES**___ 1 pt: Merge sort for CardPile implemented efficiently
 
 _____ 1 pt: Implemented timing versions of at least two sort algorithms
 
