@@ -2,8 +2,19 @@ import java.util.ArrayDeque;
 import java.util.Collections;
 import java.util.Iterator;
 
+/**
+ * Implements the Merge Sort algorithm for sorting a pile of cards.
+ */
 public class MergeSortTimer{
   
+  /**
+  * Sorts a given CardPile using the Merge Sort algorithm.
+  * Each card is initially placed in its own pile, and piles are merged
+  * pairwise until a single sorted pile remains. 
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted) {
     
     ArrayDeque<CardPile> queue = new ArrayDeque<CardPile>();
@@ -46,6 +57,13 @@ public class MergeSortTimer{
   }
     //return queue.remove();
 
+  /**
+  * Merges two sorted CardPiles into a single sorted pile.
+  *
+  * @param leftPile the first sorted pile
+  * @param rightPile the second sorted pile
+  * @return a merged and sorted CardPile
+  */
   public static CardPile merge(CardPile leftPile, CardPile rightPile) {
     CardPile mergedPile = new CardPile();
 
@@ -69,6 +87,12 @@ public class MergeSortTimer{
   }
 
   /** Starts the program running */
+  /**
+  * Demonstrates the Merge Sort algorithm by shuffling a deck of cards,
+  * sorting them.
+  *
+  * @param args command-line arguments (not used)
+  */
   public static void main(String args[]) {
     
     if (args.length<1) {
