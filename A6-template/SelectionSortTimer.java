@@ -45,49 +45,28 @@ public class SelectionSortTimer {
       return smallestCard;
     }
   /** Starts the program running */
-  public static void main(String args[]) {
-    
-    if (args.length<1) {
-      System.out.println("Please specify how many cards to sort!");
-    } else {
-      Card[] deck = Card.newDeck(true);
-      CardPile cards = new CardPile();
-      
-      for (int i = 0; i<Integer.parseInt(args[0]); i++ ) {
-        cards.add(deck[(int)(52*Math.random())]);
-      }
-
-      sort(cards);
-      
+  public static void main(String[] args) {
+    if (args.length < 1) {
+        System.err.println("Please specify how many cards to sort!");
+        return;
     }
-  //  public static void main(String args[]) {
-  //   if (args.length < 1) {
-  //     System.err.println("Please specify how many cards to sort!");
-  //     return;
-  //   }
 
-  //   int numCards = Integer.parseInt(args[0]);
-  //   Card[] deck = Card.newDeck(true);
-  //   CardPile cards = new CardPile();
+    int count = Integer.parseInt(args[0]);
+    Card[] deck = Card.newDeck(true);
+    CardPile cards = new CardPile();
 
-  //   for (int i = 0; i < numCards; i++) {
-  //     cards.add(deck[(int)(52 * Math.random())]);
-  //   }
+    for (int i = 0; i < count; i++) {
+        cards.add(deck[(int)(52 * Math.random())]);
+    }
 
-  //   System.out.println("Sorting " + numCards + " cards...");
+    // Time the sort
+    long start = System.nanoTime();
+    CardPile sorted = sort(cards); // your algorithm here
+    long end = System.nanoTime();
 
-  //   long startTime = System.currentTimeMillis();
+    System.out.println("Elapsed time: " + (end - start)/1_000_000 + " ms");
+}
 
-  //   sort(cards);
-
-  //   long endTime = System.currentTimeMillis();
-  //   long elapsedMillis = endTime - startTime;
-
-  //   double seconds = elapsedMillis / 1000.0;
-  //   double minutes = seconds / 60.0;
-
-  //   System.out.printf("Selection Sort took %.3f seconds (%.2f minutes)%n", seconds, minutes);
-  // }
 
   }
 
