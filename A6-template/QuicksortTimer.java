@@ -1,7 +1,17 @@
 import java.util.Collections;
 
+/**
+ * Implements the Quicksort algorithm for sorting a pile of cards.
+ */
 public class QuicksortTimer {
   
+  /**
+  * Recursively sorts a given CardPile using the Quicksort algorithm.
+  * A pivot is selected, and the pile is partitioned into smaller and bigger piles.
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted) {
     //reursion
     // ***********************************************************
@@ -59,6 +69,12 @@ public class QuicksortTimer {
     return result;
   }
   /** Starts the program running */
+  /**
+  * Demonstrates the Quicksort algorithm by shuffling a deck of cards,
+  * sorting them.
+  *
+  * @param args command-line arguments (not used)
+  */
   public static void main(String[] args) {
     if (args.length < 1) {
         System.err.println("Please specify how many cards to sort!");

@@ -1,8 +1,17 @@
 import java.util.Collections;
 import java.util.Iterator;
 
+/**
+ * Implements the Selection Sort algorithm for sorting a pile of cards.
+ */
 public class SelectionSortTimer {
   
+  /**
+  * Sorts a given CardPile using the Selection Sort algorithm.
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted) {
 
     // Here is the result list you will be creating
@@ -33,6 +42,11 @@ public class SelectionSortTimer {
   }
 
     //iterate through unsorted pile to find smallest card
+  /** 
+   * Finds and returns the smallest card in the given CardPile.
+   * @param pile
+   * @return smallest card in pile
+   */
   public static Card findSmallest(CardPile pile) {
       Iterator<Card> iterator = pile.iterator();
       Card smallestCard = iterator.next();
@@ -45,6 +59,11 @@ public class SelectionSortTimer {
       return smallestCard;
     }
   /** Starts the program running */
+  /**
+   * Demonstrates the Selection Sort algorithm by shuffling a deck of cards,
+   * sorting them.
+   * @param args
+   */
   public static void main(String[] args) {
     if (args.length < 1) {
         System.err.println("Please specify how many cards to sort!");
