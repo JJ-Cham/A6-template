@@ -19,11 +19,11 @@ Noticings: For every timer I tested 10k, 20k, 40k, 80k, and 160k cards.
 
 Merge      | Quick | Insertion | Selection 
 --------------------------------------------
-0.3 secs   | 
-0.29 secs  |
-0.25 secs  |
-0.26 secs  |
-0.24 secs  |
+0.3 secs   | 0.25  | 
+0.29 secs  | 0.26  |
+0.25 secs  | 0.25  |
+0.26 secs  | 0.24  |
+0.24 secs  | 0.26  |
 Please reflect on your experience with this assignment. What was most challenging? What was most interesting?
 
 The most challenging was the timers in phase 2 because for some reason they weren't working for me even FakeSortTimer wasn't working because it couldn't find the main method. I ended up fixing it by the correct command. 

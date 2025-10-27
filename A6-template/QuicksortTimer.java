@@ -59,21 +59,28 @@ public class QuicksortTimer {
     return result;
   }
   /** Starts the program running */
-  public static void main(String args[]) {
-    
-    if (args.length<1) {
-      System.err.println("Please specify how many cards to sort!");
-    } else {
-      Card[] deck = Card.newDeck(true);
-      CardPile cards = new CardPile();
-      
-      for (int i = 0; i<Integer.parseInt(args[0]); i++ ) {
-        cards.add(deck[(int)(52*Math.random())]);
-      }
-
-      sort(cards);
-      
+  public static void main(String[] args) {
+    if (args.length < 1) {
+        System.err.println("Please specify how many cards to sort!");
+        return;
     }
-} 
+
+    int count = Integer.parseInt(args[0]);
+    Card[] deck = Card.newDeck(true);
+    CardPile cards = new CardPile();
+
+    for (int i = 0; i < count; i++) {
+        cards.add(deck[(int)(52 * Math.random())]);
+    }
+
+    // Time the sort
+    long start = System.nanoTime();
+    CardPile sorted = sort(cards); // your algorithm here
+    long end = System.nanoTime();
+
+    System.out.println("Elapsed time: " + (end - start)/1_000_000 + " ms");
 }
+
+} 
+
 
