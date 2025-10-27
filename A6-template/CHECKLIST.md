@@ -25,7 +25,7 @@ __**YES**___ 1 pt: Merge sort for CardPile implemented efficiently
 
 __**YES**___ 1 pt: Implemented timing versions of at least two sort algorithms
 
-_____ 1 pt: Summary of timing results written up in readme
+__**YES**___ 1 pt: Summary of timing results written up in readme
 
 __**YES**___ Kudos: Quicksort for CardPile sorts correctly
 
@@ -40,15 +40,15 @@ __**YES**___ 2 pts: Executes fully & consistently without crashing (exception/fr
 
 _____ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      ___**YES**__ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      __**YES**___ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      _**YES**____ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      __**YES**___ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      __**YES**___ Methods avoid confusing side effects
 
 _**YES**____ 1 pt: All required files included with submission
 
