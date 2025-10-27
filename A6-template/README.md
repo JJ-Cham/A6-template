@@ -15,17 +15,20 @@ What did you notice about the differences in runtime across algorithms as you ch
 
 Predictions: I think that merge sort and insertion sort will be the "faster" algorithms because you don't need random access for merge sort and it cuts things in half every run. And I think Quick sort will take the longest because you don't have random access and you just have to keep comparing to your pivot and then put all the cards togther at the end.
 
-Noticings: For every timer I tested 10k, 20k, 40k, 80k, and 160k cards.
+Noticings: For every timer I tested 10k, 20k, 40k, 80k, and 160k cards. 
 
 Merge      | Quick | Insertion | Selection 
 --------------------------------------------
-0.3 secs   | 0.25  | 
-0.29 secs  | 0.26  |
-0.25 secs  | 0.25  |
-0.26 secs  | 0.24  |
-0.24 secs  | 0.26  |
+0.3 secs   | 0.25  | 0.25      | 0.25
+0.29 secs  | 0.26  | 0.27      | 0.26
+0.25 secs  | 0.25  | 0.26      | 0.27
+0.26 secs  | 0.24  | 0.25      | 0.28
+0.24 secs  | 0.26  | 0.32      | 0.29
+
+In the runtime, I see that merge and quick sort were the "faster" algotrithms and insertion and selection became the "slower" algorithms. As I increased the number of cards to sort through insertion and selection got slower.I orginally thought insertion would be one of the "faster" algorithms. 
+
 Please reflect on your experience with this assignment. What was most challenging? What was most interesting?
 
 The most challenging was the timers in phase 2 because for some reason they weren't working for me even FakeSortTimer wasn't working because it couldn't find the main method. I ended up fixing it by the correct command. 
 
-The most interesting aspect was 
+The most interesting aspect was how quick sort stayed in a relatively similar range of runtime but it was still faster than insertion and selction sort. 
