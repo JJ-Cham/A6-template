@@ -1,7 +1,19 @@
 import java.util.Collections;
 
+/**
+ * Implements the Quicksort algorithm for sorting a pile of cards.
+ * Uses a SortRecorder to visualize each step of the recursive sorting process.
+ */
 public class Quicksort {
-  
+  /**
+  * Recursively sorts a given CardPile using the Quicksort algorithm.
+  * A pivot is selected, and the pile is partitioned into smaller and bigger piles.
+  * Sorting steps and partitions are recorded for visualization.
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @param record the recorder used to visualize sorting steps
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     //reursion
     // ***********************************************************
@@ -66,6 +78,12 @@ public class Quicksort {
     return result;
   }
 
+  /**
+  * Demonstrates the Quicksort algorithm by shuffling a deck of cards,
+  * sorting them, and displaying the process using a SortRecorder.
+  *
+  * @param args command-line arguments (not used)
+  */
   public static void main(String args[]) {  
       //set up sorting recorder
       SortRecorder recorder = new SortRecorder();

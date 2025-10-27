@@ -1,8 +1,20 @@
 import java.util.Collections;
 import java.util.Iterator;
 
+/**
+ * Implements the Insertion Sort algorithm for sorting a pile of cards.
+ * Uses a SortRecorder to visualize each step of the sorting process.
+ */
 public class InsertionSort {
   
+  /**
+  * Sorts a given CardPile using the Insertion Sort algorithm.
+  * Records each step of the sorting process using the provided SortRecorder.
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @param record the recorder used to visualize sorting steps
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     
     // register the starting configuration with the recorder
@@ -46,6 +58,12 @@ public class InsertionSort {
     return sorted;
   }
 
+  /**
+  * Demonstrates the Insertion Sort algorithm by shuffling a deck of cards,
+  * sorting them, and displaying the process using a SortRecorder.
+  *
+  * @param args command-line arguments (not used)
+  */
   public static void main(String args[]) {  
       //set up sorting recorder
       SortRecorder recorder = new SortRecorder();

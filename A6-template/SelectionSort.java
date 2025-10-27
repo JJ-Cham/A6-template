@@ -1,8 +1,21 @@
 import java.util.Collections;
 import java.util.Iterator;
 
+
+/**
+ * Implements the Selection Sort algorithm for sorting a pile of cards.
+ * Uses a SortRecorder to visualize each step of the sorting process.
+ */
 public class SelectionSort {
   
+  /**
+    * Sorts a given CardPile using the Selection Sort algorithm.
+    * Records each step of the sorting process using the provided SortRecorder.
+    *
+    * @param unsorted the pile of cards to be sorted
+    * @param record the recorder used to visualize sorting steps
+    * @return a new CardPile containing the sorted cards
+    */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     
     // register the starting configuration with the recorder
@@ -40,6 +53,11 @@ public class SelectionSort {
   }
 
     //iterate through unsorted pile to find smallest card
+  /**
+   * Finds and returns the smallest card in the given CardPile.
+   * @param pile
+   * @return smallest card in pile
+   */
   public static Card findSmallest(CardPile pile) {
       Iterator<Card> iterator = pile.iterator();
       Card smallestCard = iterator.next();
@@ -52,6 +70,11 @@ public class SelectionSort {
       return smallestCard;
     }
 
+  /**
+   * Demonstrates the Selection Sort algorithm by shuffling a deck of cards,
+   * sorting them, and displaying the process using a SortRecorder.
+   * @param args
+   */
   public static void main(String args[]) {  
       //set up sorting recorder
       SortRecorder recorder = new SortRecorder();

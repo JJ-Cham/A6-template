@@ -23,18 +23,18 @@ __**YES**___ 1 pt: Merge sort for CardPile sorts correctly
 
 __**YES**___ 1 pt: Merge sort for CardPile implemented efficiently
 
-_____ 1 pt: Implemented timing versions of at least two sort algorithms
+__**YES**___ 1 pt: Implemented timing versions of at least two sort algorithms
 
 _____ 1 pt: Summary of timing results written up in readme
 
 __**YES**___ Kudos: Quicksort for CardPile sorts correctly
 
-_____ Kudos: Quicksort for CardPile implemented efficiently
+___**YES**__ Kudos: Quicksort for CardPile implemented efficiently
 
 
 ## General Items:
 
-_____ 4 pts: Program compiles without errors or warnings
+__**YES**___ 4 pts: Program compiles without errors or warnings
 
 __**YES**___ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 

@@ -18,7 +18,7 @@ public class SelectionSortTimer {
     //        record.add(sorted);   // the sorted pile
     //        record.add(unsorted); // the unsorted pile
     // ***********************************************************
-    Collections.shuffle(unsorted); //shuffle unsorted pile to start
+    //Collections.shuffle(unsorted); //shuffle unsorted pile to start
   
     while (unsorted.size() > 0) {
       // move one card between piles
@@ -48,7 +48,7 @@ public class SelectionSortTimer {
   public static void main(String args[]) {
     
     if (args.length<1) {
-      System.err.println("Please specify how many cards to sort!");
+      System.out.println("Please specify how many cards to sort!");
     } else {
       Card[] deck = Card.newDeck(true);
       CardPile cards = new CardPile();
@@ -60,6 +60,34 @@ public class SelectionSortTimer {
       sort(cards);
       
     }
+  //  public static void main(String args[]) {
+  //   if (args.length < 1) {
+  //     System.err.println("Please specify how many cards to sort!");
+  //     return;
+  //   }
+
+  //   int numCards = Integer.parseInt(args[0]);
+  //   Card[] deck = Card.newDeck(true);
+  //   CardPile cards = new CardPile();
+
+  //   for (int i = 0; i < numCards; i++) {
+  //     cards.add(deck[(int)(52 * Math.random())]);
+  //   }
+
+  //   System.out.println("Sorting " + numCards + " cards...");
+
+  //   long startTime = System.currentTimeMillis();
+
+  //   sort(cards);
+
+  //   long endTime = System.currentTimeMillis();
+  //   long elapsedMillis = endTime - startTime;
+
+  //   double seconds = elapsedMillis / 1000.0;
+  //   double minutes = seconds / 60.0;
+
+  //   System.out.printf("Selection Sort took %.3f seconds (%.2f minutes)%n", seconds, minutes);
+  // }
 
   }
-}
+

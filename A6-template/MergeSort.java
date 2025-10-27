@@ -2,8 +2,21 @@ import java.util.ArrayDeque;
 import java.util.Collections;
 import java.util.Iterator;
 
+/**
+ * Implements the Merge Sort algorithm for sorting a pile of cards.
+ * Uses a SortRecorder to visualize each step of the sorting process.
+ */
 public class MergeSort {
   
+  /**
+  * Sorts a given CardPile using the Merge Sort algorithm.
+  * Each card is initially placed in its own pile, and piles are merged
+  * pairwise until a single sorted pile remains. Sorting steps are recorded.
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @param record the recorder used to visualize sorting steps
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted, SortRecorder record) {
     record.add(unsorted);
     ArrayDeque<CardPile> queue = new ArrayDeque<CardPile>();
@@ -49,6 +62,13 @@ public class MergeSort {
   }
     //return queue.remove();
 
+  /**
+  * Merges two sorted CardPiles into a single sorted pile.
+  *
+  * @param leftPile the first sorted pile
+  * @param rightPile the second sorted pile
+  * @return a merged and sorted CardPile
+  */
   public static CardPile merge(CardPile leftPile, CardPile rightPile) {
     CardPile mergedPile = new CardPile();
 
@@ -71,6 +91,12 @@ public class MergeSort {
     return mergedPile;
   }
 
+  /**
+  * Demonstrates the Merge Sort algorithm by shuffling a deck of cards,
+  * sorting them, and displaying the process using a SortRecorder.
+  *
+  * @param args command-line arguments (not used)
+  */
   public static void main(String args[]) {  
       //set up sorting recorder
       SortRecorder recorder = new SortRecorder();

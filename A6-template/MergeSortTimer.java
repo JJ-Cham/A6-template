@@ -67,50 +67,24 @@ public class MergeSortTimer{
     }
     return mergedPile;
   }
+
   /** Starts the program running */
-//   public static void main(String args[]) {
+  public static void main(String args[]) {
     
-//     if (args.length<1) {
-//       System.err.println("Please specify how many cards to sort!");
-//     } else {
-//       Card[] deck = Card.newDeck(true);
-//       CardPile cards = new CardPile();
-      
-//       for (int i = 0; i<Integer.parseInt(args[0]); i++ ) {
-//         cards.add(deck[(int)(52*Math.random())]);
-//       }
-
-//       sort(cards);
-      
-//     }
-  public static void main(String[] args) {
-    if (args.length < 1) {
+    if (args.length<1) {
       System.err.println("Please specify how many cards to sort!");
-      return;
-    }
+    } else {
+      Card[] deck = Card.newDeck(true);
+      CardPile cards = new CardPile();
+      
+      for (int i = 0; i<Integer.parseInt(args[0]); i++ ) {
+        cards.add(deck[(int)(52*Math.random())]);
+      }
 
-    int numCards = Integer.parseInt(args[0]);
-
-    // Build random deck
-    Card[] deck = Card.newDeck(true);
-    CardPile cards = new CardPile();
-    for (int i = 0; i < numCards; i++) {
-      cards.add(deck[(int)(52 * Math.random())]);
-    }
-
-    Collections.shuffle(cards);
-
-    // Start timing
-    long start = System.nanoTime();
-
-    // Call your MergeSort (no SortRecorder)
-    CardPile sorted = MergeSort.sort(cards); 
-
-    long end = System.nanoTime();
-    double elapsedSeconds = (end - start) / 1_000_000_000.0;
-
-    System.out.printf("MergeSort took %.3f seconds to sort %d cards.%n", elapsedSeconds, numCards);
-  }
+      sort(cards);
 }
+}
+    }
+  
 
 

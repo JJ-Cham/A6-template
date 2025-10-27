@@ -20,4 +20,6 @@ Noticings:
 
 Please reflect on your experience with this assignment. What was most challenging? What was most interesting?
 
-The most challenging was the timers in phase 2 because for some reason they weren't working for me even FakeSortTimer wasn't working because it couldn't find the main method. I ended up fixing it by 
+The most challenging was the timers in phase 2 because for some reason they weren't working for me even FakeSortTimer wasn't working because it couldn't find the main method. I ended up fixing it by the correct command. 
+
+The most interesting aspect was 
