@@ -1,8 +1,17 @@
 import java.util.Collections;
 import java.util.Iterator;
 
+/**
+ * Implements the Insertion Sort algorithm for sorting a pile of cards.
+ */
 public class InsertionSortTimer {
   
+  /**
+  * Sorts a given CardPile using the Insertion Sort algorithm.
+  *
+  * @param unsorted the pile of cards to be sorted
+  * @return a new CardPile containing the sorted cards
+  */
   public static CardPile sort(CardPile unsorted) {
 
     // Here is the result list you will be creating
@@ -38,6 +47,12 @@ public class InsertionSortTimer {
     return sorted;
   }
   /** Starts the program running */
+  /**
+  * Demonstrates the Insertion Sort algorithm by shuffling a deck of cards,
+  * sorting them
+  *
+  * @param args command-line arguments (not used)
+  */
   public static void main(String args[]) {
     
     if (args.length<1) {
